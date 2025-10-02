@@ -1,0 +1,54 @@
+{
+  "valid_objects": [
+    {
+      "name": "Apple MacBook Pro 16",
+      "data": {
+        "year": 2023,
+        "price": 2499.99,
+        "CPU model": "Apple M3 Pro",
+        "Hard disk size": "512 GB"
+      }
+    },
+    {
+      "name": "Apple iPhone 14",
+      "data": {
+        "color": "Midnight",
+        "price": 999,
+        "generation": "14th",
+        "capacity": "128 GB"
+      }
+    },
+    {
+      "name": "Samsung Galaxy S23",
+      "data": {
+        "color": "Phantom Black",
+        "price": 899.99,
+        "capacity": "256 GB",
+        "year": 2023
+      }
+    },
+    {
+      "name": "Dell XPS 15",
+      "data": {
+        "year": 2023,
+        "price": 1799.99,
+        "CPU model": "Intel Core i7",
+        "Hard disk size": "1 TB SSD"
+      }
+    }
+  ],
+  "update_data": {
+    "name": "Apple MacBook Pro 16 (Updated)",
+    "data": {
+      "year": 2024,
+      "price": 2799.99,
+      "CPU model": "Apple M3 Max",
+      "Hard disk size": "1 TB"
+    }
+  },
+  "partial_update_data": {
+    "name": "Updated Name Only"
+  }
+}
+
+

@@ -1,0 +1,46 @@
+# UI Test Configuration
+
+browser:
+  default: chrome
+  headless: false
+  mobile_emulation: false
+  
+timeouts:
+  implicit_wait: 10
+  explicit_wait: 20
+  page_load: 60
+  script: 30
+  
+window:
+  width: 1920
+  height: 1080
+  maximize: true
+  
+mobile:
+  device_name: "iPhone 12 Pro"
+  user_agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+  width: 390
+  height: 844
+  
+capabilities:
+  accept_insecure_certs: true
+  unhandled_prompt_behavior: "dismiss"
+  page_load_strategy: "normal"
+
+# Test URLs
+urls:
+  twitch: "https://www.twitch.tv"
+  
+# Screenshot settings
+screenshots:
+  on_failure: true
+  on_success: false
+  format: "png"
+  
+# Logging
+logging:
+  level: "INFO"
+  console: true
+  file: true
+
+

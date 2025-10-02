@@ -8,7 +8,7 @@ Comprehensive test automation framework for UI and API testing using **Pytest** 
 
 ## 🎥 Demo
 
-![Test Execution Demo](demo.gif)
+![Test Execution Demo](qa-automation-framework.gif)
 
 *UI test running locally - Complete Twitch search flow (67 seconds)*
 
@@ -130,40 +130,74 @@ pip install -r requirements.txt
 
 ## 🧪 Running Tests
 
-### Run All Tests
+### ⚡ Quick Start (One Command)
+
+The easiest way to run tests:
+
 ```bash
-pytest
+# Using Makefile (recommended)
+make test              # Run all tests
+make test-demo         # Run demo (shown in GIF)
+make test-api          # Run API tests only
+make test-ui           # Run UI tests only
+make help              # Show all commands
+
+# OR using shell script
+./run_tests.sh         # Interactive menu
+./run_tests.sh all     # Run all tests
+./run_tests.sh demo    # Run demo
+
+# OR traditional Pytest
+pytest                 # Run all tests
 ```
 
-### Run API Tests Only
+### 📝 All Available Commands
+
+#### Using Makefile (Like TestNG.xml)
 ```bash
+make install           # Install dependencies
+make test              # Run all tests (API + UI)
+make test-api          # Run API tests only
+make test-ui           # Run UI tests only
+make test-smoke        # Run smoke tests only
+make test-demo         # Run quick demo (for GIF)
+make test-html         # Run with HTML report
+make test-allure       # Run with Allure report
+make clean             # Clean up generated files
+```
+
+#### Using Shell Script
+```bash
+./run_tests.sh all     # Run all tests
+./run_tests.sh api     # Run API tests
+./run_tests.sh ui      # Run UI tests
+./run_tests.sh demo    # Run demo
+./run_tests.sh html    # Generate HTML report
+```
+
+#### Traditional Pytest Commands
+```bash
+# Run all tests
+pytest -v
+
+# Run specific test suite
 pytest api_tests/ -v
-```
-
-### Run UI Tests Only
-```bash
 pytest ui_tests/ -v --browser=chrome
-```
 
-### Run Specific Test
-```bash
+# Run specific test
 pytest ui_tests/tests/test_twitch_search.py::TestTwitchSearch::test_search_starcraft_and_select_streamer -v
-```
 
-### Run Tests with Allure Report
-```bash
+# Run by markers
+pytest -m smoke -v
+pytest -m api -v
+pytest -m ui -v
+
+# Run with reports
+pytest --html=reports/test-report.html --self-contained-html
 pytest --alluredir=reports/allure-results
-allure serve reports/allure-results
-```
 
-### Run Tests in Parallel
-```bash
+# Run in parallel
 pytest -n auto
-```
-
-### Run Smoke Tests Only
-```bash
-pytest -m smoke
 ```
 
 ## 📊 Test Reports

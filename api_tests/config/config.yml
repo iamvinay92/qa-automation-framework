@@ -1,0 +1,48 @@
+# API Test Configuration
+
+api:
+  base_url: "https://api.restful-api.dev"
+  timeout: 30
+  verify_ssl: true
+  retry_count: 3
+  retry_delay: 1
+
+# ipstack Geolocation API Configuration
+ipstack:
+  base_url: "https://api.ipstack.com"
+  access_key: "756f0ca591b2244342b8368a435d2554"
+  timeout: 30
+  verify_ssl: true
+  
+headers:
+  Content-Type: "application/json"
+  Accept: "application/json"
+  
+endpoints:
+  objects: "/objects"
+  object_by_id: "/objects/{id}"
+  
+performance:
+  max_response_time: 3.0
+  max_response_time_get: 2.0
+  max_response_time_post: 3.0
+  max_response_time_put: 3.0
+  max_response_time_delete: 2.0
+  
+validation:
+  strict_mode: true
+  validate_schema: true
+  validate_types: true
+  
+logging:
+  level: "INFO"
+  console: true
+  file: true
+  include_request: true
+  include_response: true
+  
+test_data:
+  cleanup_after_test: true
+  generate_unique_names: true
+
+
